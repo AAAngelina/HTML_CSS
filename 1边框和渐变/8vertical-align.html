@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vertical-align</title>
+  <!--vertical-align:设置元素的垂直对齐方式，设置给需要对齐的行内元素本身；
+    text-align:设置给需要对齐元素的父元素-->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      width: 400px;
+      background: #b9f3ff;
+      font-size: 40px;
+      margin: 300px auto;
+      line-height: 100px;
+    }
+    img{
+      /*默认图片与一行文字的基线(最短文字底部)对齐：baseline;
+      文字顶部/底部：text-top,text-bottom;
+      文字中线(基线向上1/4处)：middle;
+      盒子顶部/底部：top，bottom;
+      */
+      vertical-align: text-top;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Angelina!
+    <img src="../images/dog.jpg" alt="">
+  </div>
+</body>
+</html>

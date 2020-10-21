@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>线性渐变</title>
+  <!--linear-gradient():至少传两个颜色，至多不限；
+                      系统自定计算纯色和渐变色的范围；-->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .main{
+      width: 300px;
+      height: 200px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      margin: 200px auto;
+      /*1.默认从上至下渐变*/
+      /*background: linear-gradient(red,gold);*/
+
+      /*2.to top,to lift,to right*/
+      /*background: linear-gradient(to top,red,gold); */
+
+      /*3.左上下 or 右上下*/
+      /*background: linear-gradient(to top right,red,gold);*/
+
+      /*4.度数*/
+      /*background: linear-gradient(90deg,red,gold);*/
+
+      /*手动：第一个颜色指定纯色的范围；后边颜色均指定渐变的范围*/
+      background: linear-gradient(to right,red 50px,yellow 200px);
+    }
+    .one{
+      width: 50px;
+      height: 100%;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="one"></div>
+  </div>
+</body>
+</html>

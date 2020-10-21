@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>边框圆角</title>
+  <!--直角边框变圆角边框-->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .father{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      margin: 100px auto;
+      border-radius: 100px 0 0 0;  /*左上、右上、右下、左下，找圆心画弧*/
+     /* border-radius: 50%;  正方形变圆形*/
+     /* border-radius: 100px 50px; 参考对角*/
+     /*当边框圆角的值 》 边框宽度，内边框和外边框都会变为圆角
+       当边框圆角的值 《= 边框宽度，外边框会变为圆角*/
+    }
+    .son{
+      width: 100px;
+      height: 100px;
+      background: rgba(255,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+</html>

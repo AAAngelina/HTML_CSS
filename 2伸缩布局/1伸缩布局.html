@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伸缩布局</title>
+  <!--1.伸缩容器和伸缩项。flex
+      2.主轴方向(默认)：主轴(水平,起点：容器最左；终点：容器最右)；
+              侧轴(垂直),起点：容器最上，终点：容器最下。
+              按主轴起点开始布局，主轴方向可变；主轴和侧轴十字交叉。
+      3.主轴对齐方式：调整 排版好内容 在主轴上的对齐方式。justify-content
+      4.侧轴对齐方式：调整 排版好内容 在侧轴上的对齐方式。
+          4.1 一次性控制所有伸缩项：伸缩容器中设置 align-items 属性
+          4.2 单独控制某一伸缩项：  该伸缩项中设置 align-self  属性。
+   -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+      width: 600px;
+      height: 600px;
+      border: 1px solid #000;
+      margin: 200px auto;
+
+      /*1.在父元素ul(伸缩容器)中，使用伸缩布局；伸缩项li*/
+      display: flex;
+
+      /*2.主轴方向，默认row；roe-reverse,column/column-reverse*/
+      flex-direction: row;
+      /*flex-direction: column-reverse;*/
+
+      /*3.主轴对齐方式: 调整 排版好内容的 主轴对齐方式；
+        center/space-between:两端对齐/space-around:环绕对齐，元素左右各留一段空间
+      */
+      justify-content: flex-start;  /*默认：伸缩项与主轴起点对齐*/
+      /*justify-content: flex-end;*/
+
+      /*4.侧轴对齐方式：调整 排版好内容 在侧轴上的对齐方式
+          flex-start/flex-end/center
+          无两端和环绕对齐
+          baseline：基线对齐，所有伸缩项的基线在一条直线上对齐
+          stretch:  拉伸对齐/等高对齐，所有伸缩项的高度变为侧轴的高度，伸缩项不许设置高度
+      */
+      align-items: flex-start;  //默认
+    }
+    ul>li{
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      background: red;
+    }
+    ul>li:nth-child(2){
+      background: green;
+    }
+    ul>li:nth-child(3){
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</body>
+</html>

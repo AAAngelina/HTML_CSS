@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>线性渐变练习</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background: black;
+    }
+    div{
+      width: 750px;
+      height: 200px;
+      line-height: 200px;
+      font-size: 150px;
+      font-weight: bold;
+      border: 1px solid #a36fff;
+      margin: 200px auto;
+
+      /*color: transparent;  !*将文字设置为透明色*!*/
+      background: linear-gradient(-45deg,transparent 100px,white 150px,white 180px,transparent 220px);
+      background-position: -550px 0;
+      background-repeat: no-repeat;
+      color: rgba(255,255,255,0.3);
+      -webkit-background-clip: text; /*私有属性，将背景颜色裁剪为文字大小；-webkit chrome/safari内核识别码*/
+      transition: all 5s;
+    }
+    div:hover{
+      background-position: 550px 0;
+    }
+  </style>
+</head>
+<body>
+  <div>Angelina!</div>
+</body>
+</html>

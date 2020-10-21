@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>边框图片</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      width: 300px;
+      height: 300px;
+      border: 70px solid #000000;
+      box-sizing: border-box;
+      margin: 200px auto;
+      background: #b9f3ff;
+
+      /*!*只通过source指定边框的图片，默认会将图片放到边框的四个顶点
+        边框图片优先级  高于  边框颜色*!
+      border-image-source: url("../images/border.jpg");
+
+      !*1.对边框图片进行切割  距上、右、下、左的距离切割*!
+      border-image-slice: 70 70 70 70;
+      !*border-image-slice: 70 70 70 70 fill; 显示中间被切掉的图片*!
+
+      !*2.指定边框图片显示的宽度*!
+     !* border-image-width: 10px;*!
+
+      !*3.指定：除了边框图片四个角外的图片，如何填充，默认拉伸stretch/repeat/round：repeat+stretch*!
+      border-image-repeat: stretch;
+
+      !*4.指定：边框图片向外移动的距离，上、右、下、左*!
+      border-image-outset: 10px 30px 50px 70px;*/
+
+      /*连写: 资源地址 切割方式 填充模式*/
+      border-image: url("../images/border.jpg") 70 fill repeat;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
