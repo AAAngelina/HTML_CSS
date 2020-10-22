@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>换行</title>
+  <!--1.默认：伸缩容器一行放不下所有的伸缩项，系统会自动等比压缩所有的伸缩项，成为一行。
+      2. 是否自动换行: flex-wrap
+      3.换行之后的对齐方式(侧轴对齐): align-content
+   -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+      width: 600px;
+      height: 600px;
+      border: 1px solid #000;
+      margin: 200px auto;
+
+      display: flex;
+
+      /*1.默认不换行，nowrap；换行wrap;换行+以行为单位进行反转weiwrap-reverse:*/
+      flex-wrap: wrap;
+
+      /*2.换行之后的对齐方式：flex-start/flex-end/center/space-between/space-around/stretch(默认:以行为单位拉伸，空白填充)*/
+      align-content: stretch;
+    }
+    ul>li{
+      height: 100px;
+      width: 300px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      background: red;
+    }
+    ul>li:nth-child(2){
+      background: green;
+    }
+    ul>li:nth-child(3){
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+</body>
+</html>

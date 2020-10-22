@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伸缩项扩充</title>
+  <!--1.flex-grow:当所有伸缩项宽度总和 < 伸缩容器宽度时生效，使得能够填满整个伸缩容器。
+      2.扩充公式： （伸缩容器宽度 - 所有伸缩项宽度）/所有扩充分数总和 = 每份扩充大小
+                    伸缩项扩充后宽度 = 伸缩项宽度 + 每份大小 * 倍数。
+   -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+      width: 600px;
+      height: 600px;
+      border: 1px solid #000;
+      margin: 200px auto;
+
+      display: flex;
+    }
+    ul>li{
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      background: red;
+    }
+    ul>li:nth-child(1){
+     flex-grow: 0;
+    }
+    ul>li:nth-child(2){
+      flex-grow: 5;
+      background: green;
+    }
+    ul>li:nth-child(3){
+      flex-grow: 2;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+</body>
+</html>

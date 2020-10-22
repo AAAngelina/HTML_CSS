@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伸缩项缩小</title>
+  <!--1.当所有伸缩项宽度总和 > 伸缩容器宽度时生效，默认等比缩小。
+        flex-shrink: 1(默认：等比缩小自己)；0(不被缩小)
+      2.缩小公式： 2.1 所有伸缩项宽度 - 伸缩容器宽度 = 溢出宽度；
+                        900 - 600 = 300
+                   2.2 权重：每个伸缩项需要的份数 * 当前伸缩项的宽度，再相加;
+                         1*300 + 4*300 + 8*300 = 3900
+                   2.3 每个伸缩项需要缩小的范围：溢出宽度*当前伸缩项宽度*当前分数 / 权重值
+                         300*300*1 / 3900 = 23.07
+                   2.4  伸缩项最终宽度：伸缩项宽度 - 缩小范围。
+                        300 - 23.07 =   276.9
+
+   -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+      width: 600px;
+      height: 600px;
+      border: 1px solid #000;
+      margin: 200px auto;
+
+      display: flex;
+    }
+    ul>li{
+      height: 100px;
+      width: 300px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      background: red;
+    }
+    ul>li:nth-child(1){
+      flex-shrink: 1;
+    }
+    ul>li:nth-child(2){
+      flex-shrink: 4;
+      background: green;
+    }
+    ul>li:nth-child(3){
+      flex-shrink: 8;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+</body>
+</html>

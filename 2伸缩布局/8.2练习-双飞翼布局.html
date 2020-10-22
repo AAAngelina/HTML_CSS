@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>双飞翼布局</title>
+  <!--三栏布局：两侧宽度固定，中间自适应.
+      缩小后不会变形。
+      步骤：1.一个容器里放三个盒子
+           2.设置两侧盒子宽度固定,中间盒子宽度 = 容器宽度(100%)
+           3.使三个盒子在一个方向上浮动
+           4.给中间盒子添加子盒子；并设置 margin: 0 两侧盒子的宽度
+           5.设置左边盒子的 margin-left: -100%
+           6.设置右边盒子的 margin-left: -自宽度px
+  -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      background: red;
+      overflow: hidden;  /*清除子元素浮动*/
+    }
+    .left,.right{
+      width: 200px;
+      height: 200px;
+      background: #a36fff;
+      float: left;
+    }
+    .left{
+      margin-left: -100%;
+    }
+    .right{
+      margin-left: -200px;
+    }
+    .center{
+      width: 100%;
+      height: 200px;
+      background: #75b7ff;
+      float: left;
+    }
+    .center>.center-in{
+      margin: 0 200px;
+      height: 200px;
+      background: green;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="center">
+      <div class="center-in"></div>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>属性连写</title>
+  <!-- flex: 0 1 auto；默认
+   -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+      width: 600px;
+      height: 600px;
+      border: 1px solid #000;
+      margin: 200px auto;
+
+      display: flex;
+    }
+    ul>li{
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      background: red;
+    }
+    ul>li:nth-child(1){
+      /*flex: 扩充 缩小 宽度*/
+      flex: 0 1 auto;
+    }
+    ul>li:nth-child(2){
+      flex: 0 4 auto;
+      background: green;
+    }
+    ul>li:nth-child(3){
+      flex: 0 8 auto;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+</body>
+</html>

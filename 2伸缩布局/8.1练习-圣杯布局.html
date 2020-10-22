@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>圣杯布局</title>
+  <!--三栏布局：两侧宽度固定、中间自适应
+      步骤：
+            1.一个容器，放三个盒子；
+            2.设置两侧盒子宽度固定,中间盒子宽度 = 容器宽度(100%)
+            3.设置容器左右两侧的 padding = 两侧盒子的宽度
+            4.使三个盒子在一个方向上浮动
+            5.设置左边盒子的 margin-left: -100%；调整左边盒子使之不盖住中间区域:相对定位 + left: -自宽度px
+            6.设置右边盒子的 margin-left: -自宽度px；调整位置：相对定位 + left: 自身宽度
+            7.给容器设置最小宽度，防止缩小后变形。
+  -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      min-width: 400px;
+      background: #a36fff;
+      padding: 0 200px;
+     /* overflow: hidden;  !*清除浮动*!*/
+    }
+    .left, .right{
+      width: 200px;
+      height: 200px;
+      background: #b9f3ff;
+      float: left;
+    }
+    .center{
+      width: 100%;
+      height: 200px;
+      background: yellow;
+      float: left;
+    }
+   .left{
+     margin-left: -100%;
+     position: relative;
+     left: -200px;
+   }
+    .right{
+      margin-left: -200px;
+      position: relative;
+      left: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="center"></div>  <!--先加载中间内容较多区域-->
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
