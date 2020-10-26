@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #eeeeee;
+}
+body{
+    /*设置当前元素 最小、最大 宽度*/
+    min-width: 320px;
+    max-width: 750px;
+/*    height: 1000px;*/
+    margin: 0 auto;
+    background: #ffffff;
+}
+.header{
+    background: #a36fff;
+}
+.header>img{
+    width: 100%;  /*可随父元素等比缩放*/
+    vertical-align: bottom;  /*使之与盒子底部对齐*/
+}
+
+.main{
+    color: #ffffff;
+}
+.main>.section{
+    display: flex;   /*伸缩容器*/
+    margin: 4px 2px;
+    height: 100px;
+    background: #ff6557;
+}
+.main>.section>.col{
+  /*  flex-grow: 1;     !*等比扩充*!
+    flex-shrink: 1;   !*等比缩小*!
+    flex-basis: 0%;*/
+    flex: 1;
+    border-left: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: center;  /*内部内容居中显示*/
+}
+.main>.section>.col:nth-child(1){
+    border-left: none;   /*取消左边边框*/
+}
+.section>.image-text>p{
+    margin: 16px 0;
+}
+.section>.image-text>img{
+    width: 42px;
+    height: 46px;
+}
+.main>.section>.col>div{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ffffff;
+    box-sizing: border-box;
+}
+.section>.col>div:last-child{
+    border-bottom: none;
+}
+.main>.section:nth-child(2){
+    background: #009bfe;
+}
+.main>.section:nth-child(3){
+    background: #7caa2f;
+}
+.main>.section:last-child{
+    height: 50px;
+    line-height: 50px;
+    background: #ff9a00;
+}
+
+.nav{
+    background: #ccc;
+    padding: 10px 0;    /*上下10px的距离*/
+}
+.nav>ul{
+    display: flex;       /*设置伸缩容器*/
+    list-style: none;
+    background: #fff;
+}
+.nav>ul>li{
+    flex: 1;
+    height: 70px;
+   /* background: #83c7ef;*/
+    text-align: center;
+}
+.nav>ul>li>p{
+    color: #666666;
+    font-size: 12px;
+}
+.nav>ul>li>i{
+    margin-top: 12px;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+}
+.nav>ul:first-child>li:nth-child(1)>i{
+    /*精灵图设置*/
+    background: url("./../images/icons.png") no-repeat -35px -12px;
+}
+.nav>ul:first-child>li:nth-child(2)>i{
+    background: url("./../images/icons.png") no-repeat -125px -12px;
+}
+.nav>ul:first-child>li:nth-child(3)>i{
+    background: url("./../images/icons.png") no-repeat -210px -12px;
+}
+.nav>ul:first-child>li:nth-child(4)>i{
+    background: url("./../images/icons.png") no-repeat -300px -12px;
+}
+
+.nav>ul:last-child>li:nth-child(1)>i{
+    background: url("./../images/icons.png") no-repeat -35px -80px;
+}
+.nav>ul:last-child>li:nth-child(2)>i{
+    background: url("./../images/icons.png") no-repeat -125px -80px;
+}
+.nav>ul:last-child>li:nth-child(3)>i{
+    background: url("./../images/icons.png") no-repeat -210px -80px;
+}
+.nav>ul:last-child>li:nth-child(4)>i{
+    background: url("./../images/icons.png") no-repeat -300px -80px;
+}
+
+.guide{
+    display: flex;
+    height: 80px;
+    background: #fff;
+}
+.guide>div{
+    flex: 1;
+    text-align: center;
+}
+.guide>div>i{
+    margin-top: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #666666;
+    border-radius: 50%;
+}
+.guide>div:nth-child(1)>i{
+    font-size: 30px;
+}
+.guide>div:nth-child(2)>i{
+    font-size: 20px;
+}
+.guide>div:nth-child(3)>i{
+    font-size: 25px;
+}
+.guide>div>p{
+    color: #666666;
+    font-size: 12px;
+}
+
+.footer{
+    height: 50px;
+    background: #cccccc;
+}
+.footer>p{
+    float: left;
+    line-height: 50px;
+}
+.footer>p:first-child{
+    margin-right: 10px;
+}
+.footer>p>a{
+    text-decoration: none;  /*去除a标签的默认样式*/
+    color: #333333;
+}
