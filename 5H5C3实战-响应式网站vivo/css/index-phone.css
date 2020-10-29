@@ -1,0 +1,102 @@
+/*头部区域*/
+.header>.header-top{
+    display: none;
+}
+.header>.header-bottom{
+    display: none;
+}
+.phone-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+.phone-header a{
+    font-size: 35px;
+    color: #eeeeee;
+}
+.phone-header>h1 a{
+    font-size: 80px;
+}
+
+/*内容区域*/
+.main{
+    margin-top: 0;
+}
+.main-top>div{
+    display: none;
+}
+.main-top>ul li:nth-child(1){
+    display: none;
+}
+.main-top>ul li:nth-child(2){
+    display: block;
+}
+.main-bottom>div{
+    width: 100%;
+}
+.main-bottom>div img{
+    width: 100%;
+    height: 100%;
+}
+
+/*底部区域*/
+.footer>.footer-in{
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+.footer-in>.footer-top>.footer-top-left{
+    float: none;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.footer-in>.footer-top>.footer-top-right{
+    float: none;
+    width: 100%;
+}
+.footer-top>.footer-top-left dl{
+    width: 100%;
+}
+.footer-top>.footer-top-left dl>dd{
+    display: none;
+}
+.footer-top>.footer-top-left dl>dt{
+    font-size: 20px;
+    color: #666666;
+    font-weight: 400;
+}
+.footer-top>.footer-top-left dl>dt::after{
+    content: '';
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: url("../images/add.png") center center no-repeat;
+    background-size: 20px 20px;
+}
+.footer-in>.footer-top>.footer-top-right{
+    margin-bottom: 20px;
+}
+.footer-in>.footer-top>.footer-top-right p:nth-child(1){
+    float: left;
+}
+.footer-top>.footer-top-right>p:nth-child(1) a{
+    color: #415fff;
+    font-size: 30px;
+}
+.footer-top>.footer-top-right>p{
+    text-align: right;
+}
+.footer-in>.footer-top>.footer-top-right p:nth-child(2){
+    font-size: 18px;
+}
+.footer-in>.footer-bottom>.footer-bottom-right{
+    float: none;
+    padding: 10px 0;
+}
+.footer-in>.footer-bottom>.footer-bottom-right a{
+    font-size: 23px;
+}
+.footer-in>.footer-bottom>.footer-bottom-left{
+    font-size: 18px;
+}

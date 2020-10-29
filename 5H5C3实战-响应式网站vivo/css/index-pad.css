@@ -1,0 +1,49 @@
+/*头部区域*/
+.nav2{
+    display: block;
+}
+.nav1{
+    display: none;
+}
+.header>.header-bottom{
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/*内容区域*/
+.main-top>div>i{
+    width: 200px;
+    height: 30px;
+    background: url("../images/vivo-banner-title1-small.png") no-repeat;
+}
+.main-top>div>i:nth-child(2){
+    background: url("../images/vivo-banner-title2-small.png") no-repeat;
+}
+.main-top>div>i:nth-child(3){
+    background: url("../images/vivo-banner-title3-small.png") no-repeat;
+}
+.main-top>div>p{
+    width: 200px;
+    margin-top: 34px;
+}
+.main>.main-bottom{
+    flex-wrap: wrap;   /*伸缩容器需要换行*/
+    margin-top: 0;
+}
+.main-bottom>div{   /*伸缩项不需等比拉伸，每个占每行的50%*/
+    flex: none;
+    width: 50%;
+    margin-top: 5px;
+}
+
+/*底部*/
+.footer>.footer-in{
+    width: 100%;
+    padding: 0 20px;
+}
+.footer-in>.footer-bottom>.footer-bottom-left{
+    float: none;
+    width: auto;   /*自动改变宽度*/
+    margin-right: 25%;
+}
