@@ -1,0 +1,40 @@
+
+/*网页常用样式的工具类*/
+
+    /*左右浮动类*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.clearfix::after{
+    /*设置添加的子元素的内容为空*/
+    content: "";
+    /*设置添加的子元素为块级元素*/
+    display: block;
+    /*设置添加的子元素的高度为0*/
+    height: 0;
+    /*设置添加的子元素看不见*/
+    visibility: hidden;
+    /*给添加的子元素设置clear: both;*/
+    clear: both;
+}
+
+    /*清除浮动类*/
+.clearfix{
+    /*兼容IE6*/
+    *zoom:1;
+}
+
+    /*颜色类*/
+.color-f60{
+    color: #f60 !important;  /*优先级最高*/
+}
+    /*版心类*/
+.div-in{
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+}
